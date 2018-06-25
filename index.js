@@ -1,6 +1,6 @@
 import MouseFollowerDirective from './directive.js';
 
-var VueMouseFollower = {
+const VueMouseFollower = {
   install(Vue, options) {
     Vue.directive('mf', MouseFollowerDirective)
     Vue.directive('mousefollower', MouseFollowerDirective)

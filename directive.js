@@ -1,15 +1,15 @@
 import Vue from 'vue'
 
-var defaultFriction = 30
+const defaultFriction = 30
 
-var moveData = {
+const moveData = {
   lFollowX: 0,
   lFollowY: 0,
   x: 0,
   y: 0
 }
 
-var element, friction
+let element, friction
 
 function moveBackground() {
   moveData.x += (moveData.lFollowX - moveData.x) / friction
@@ -18,7 +18,7 @@ function moveBackground() {
   window.requestAnimationFrame(moveBackground)
 }
 
-var MouseFollowerDirective = {
+const MouseFollowerDirective = {
   bind(el, binding, vnode) {
     if (el) {
       element = el

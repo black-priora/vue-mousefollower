@@ -2,11 +2,14 @@
   "name": "vue-mousefollower",
   "version": "0.0.1",
   "description": "Vue plugin for moving background on mouse move",
-  "main": "index.js",
+  "main": "vue-mouse-follower.js",
   "author": "micorix",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/micorix/vue-mousefollower/issues"
+  },
+  "scripts": {
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,10 @@
   ],
   "dependencies": {
     "vue": "^2.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "rollup-plugin-babel": "^3.0.5"
   }
 }
