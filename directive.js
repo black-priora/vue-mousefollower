@@ -1,15 +1,15 @@
 import Vue from 'vue'
 
-const defaultFriction = 30
+var defaultFriction = 30
 
-const moveData = {
+var moveData = {
   lFollowX: 0,
   lFollowY: 0,
   x: 0,
   y: 0
 }
 
-let element, friction
+var element, friction
 
 function moveBackground() {
   moveData.x += (moveData.lFollowX - moveData.x) / friction
@@ -18,7 +18,7 @@ function moveBackground() {
   window.requestAnimationFrame(moveBackground)
 }
 
-const MouseFollowerDirective = {
+var MouseFollowerDirective = {
   bind(el, binding, vnode) {
     if (el) {
       element = el
@@ -26,7 +26,7 @@ const MouseFollowerDirective = {
 
       element.style.backgroundPosition = 'cover'
       element.style.overflow = 'hidden'
-      
+
       window.addEventListener('mousemove', (e) => {
         let lMouseX = Math.max(-100, Math.min(100, window.innerWidth / 2 - e.clientX))
         let lMouseY = Math.max(-100, Math.min(100, window.innerHeight / 2 - e.clientY))
